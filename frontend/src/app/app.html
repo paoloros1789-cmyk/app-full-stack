@@ -1,0 +1,15 @@
+<h2>Vediamo questi dati</h2>
+<p>{{ profilo.nome }}</p>
+<p>{{ profilo.professione }}</p>
+<p>{{ profilo.status }}</p>
+<h2>Lista della Spesa</h2>
+<input
+[(ngModel)]="nuovoElemento"
+placeholder="Aggiungi..."
+>
+<button (click)="aggiungi()">Aggiungi</button>
+<ul>
+<li *ngFor="let item of lista">
+{{ item.id }} - {{ item.elemento }}
+</li>
+</ul>
